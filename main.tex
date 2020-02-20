@@ -1,0 +1,219 @@
+\PassOptionsToPackage{table}{xcolor}
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xspace}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage{pgfgantt}
+\usepackage{todonotes}
+\usepackage[icelandic,UKenglish]{babel}
+\usepackage[UKenglish]{datetime}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+\usepackage[gen]{eurosym}
+\usepackage{multicol}
+\graphicspath{ {./images/} }
+\usepackage[titletoc,title]{appendix}
+\usepackage{pdfpages}
+
+\fancypagestyle{plain}{ %
+  \fancyhf{} % remove everything
+  \renewcommand{\headrulewidth}{0pt} % remove lines as well
+  \renewcommand{\footrulewidth}{0pt}
+}
+% \setlength{\topskip}{0mm}
+\setlength{\headheight}{15pt}
+% \setlength{\topmargin}{-5.4mm}
+% \setlength{\textheight}{230mm}
+\setlength{\textwidth}{180mm}
+\setlength{\oddsidemargin}{-5.0mm}
+% \setlength{\evensidemargin}{10.0mm}
+% \setlength{\captionmargin}{7mm}
+
+\newenvironment{MYitemize}{%
+    %% \renewcommand{\labelitemi}{$\rightarrow$}%
+    %% \renewcommand{\labelitemii}{$\circ$}%
+    %% \renewcommand{\labelitemii}{$\rightarrow$}%
+    %% \renewcommand{\labelitemiii}{$\rightarrow$}%
+    %% \renewcommand{\labelitemiii}{\colblack $\cdot$}%
+    \begin{itemize}}{\end{itemize}}
+\newcommand{\bitm}{\begin{MYitemize}}
+\newcommand{\eitm}{\end{MYitemize}}
+%% https://www.overleaf.com/project/5bb61ca90a2d6345decec3a2
+
+\newcommand{\dell}{Dellingr\xspace}
+\newcommand{\einfra}{e-infrastructure\xspace}
+\newcommand{\Lin}{LINPACK\xspace}
+\newcommand\EatDot[1]{}
+\newcommand{\np}{national provider\xspace}
+\newcommand{\nps}{\np{s}\xspace}
+\newcommand{\coreh}{core-hours\xspace}
+% \newcommand{\corehs}{\coreh{s}\xspace}
+\newcommand{\notrun}{not run\xspace}
+
+\newcommand{\pilot}{first test of a Nordic resource-sharing framework\xspace}
+
+\title{
+{\bf \dell Phase 2: Deliverable 6} \\
+{\it Nordic availability of shared resources}
+\author{\dell team~\footnote{ % alphabetically by last name
+% Anna Jonna {\'A}rmannsd{\'o}ttir {\tt annaj@hi.is};
+Mathias Br{\"a}nnvall {\tt mathias.brannvall@it.uu.se};
+Juha Fagerholm {\tt juha.fagerholm@csc.fi};
+Jens Svalgaard Kohrt {\tt svalgaard@sdu.dk};
+Ivar Koppel {\tt ivar.koppel@ut.ee};
+Bj{\o}rn Lindi {\tt bjorn.lindi@ntnu.no};
+Ilja Livenson {\tt ilja.livenson@ut.ee};
+Petri Nikunen {\tt petri.nikunen@csc.fi};
+Anders Sj{\"o}str{\"o}m {\tt Anders.Sjostrom@lunarc.lu.se};
+Hj{\"o}rleifur Sveinbj{\"o}rnsson {\tt hs@hi.is};
+%% M{\'a}ni Mar{\'i}us Vi{\dh}arsson {\tt mani@hi.is};
+John White {\tt john.white@cern.ch};
+}}}
+\date{\today}
+
+\begin{document}
+\pagestyle{fancy}
+% \lhead{\includegraphics[width=30pt]{NEIC_logo_screen_black.png} {\bf \dell project}}
+\lhead{{\bf \dell Project}}
+\chead{\includegraphics[height=10pt]{NEIC_logo_screen_black.png}}
+\rhead{\bf Second pilot}
+
+% \begin{center}
+% \includegraphics[width=2.0in]{NEIC_logo_screen_black.png}
+% \end{center}
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Executive Summary}
+
+\subsection{Outline of document}
+
+The contributed shared resources will be made available to researchers in the Nordics through merit-based competitive mechanisms. These mechanisms, for example a support structure for the open call and an ``allocation committee", will balance the capabilities, timelines and loads on the resources. This would be done through an open call from the National Providers.
+
+\subsubsection{Intended recipients}
+
+National providers and NeIC. 
+
+\subsubsection{Delivery process}
+
+Delivery is an operational process that supports research based usage of resources across national boundaries. Open call out in June 2019.
+\subsubsection{Delivery date}
+
+February 2020.
+
+\section{Purpose of the Document}
+
+This document describes setup of the second pilot of Dellingr as well as provides user feedback of the participants.
+
+\section{Test of Cross Border Resource Sharing Framework}
+
+Dellingr project has come up with a process to enable resource sharing across the border and be common enough so that national resource allocation policies could be integrated in a consistent manner.
+
+Below we describe the framework and highlight how user request have been processed.
+
+\subsection{Framework}
+
+The main target of the pilot were researchers that wanted to get access to computational resources.
+
+A diagram of the process that was setup is below along with more detailed explanation. Overall the process was done according to the description in DO5\footnote{\url{https://wiki.neic.no/w/int/img_auth.php/6/6f/NeIC_Dellingr_DO5_to_SG_v1.pdf}} / Section 8.
+
+
+\begin{figure}
+\centering
+\includegraphics[height=450pt]{diagram.pdf}
+\caption{Overview of the second Dellingr pilot setup}
+\end{figure}
+
+
+First of all, we have adjusted Dellingr project website so it could have been used as a landing page for new users willing to get access to resources and used in promotional activities. The website is public and does not require any authentication.
+
+The main components of the website included:
+\begin{itemize}
+    \item Description of rules of participation in the second pilot: \url{https://dellingr.neic.no/apply/}.
+    \item Guide for applying for resources via Dellingr self-service: \url{https://dellingr.neic.no/guide/}.
+    \item Up to date list of computational services available to the users along with some basic technical and performance properties \url{https://dellingr.neic.no/offerings/}.
+\end{itemize}
+
+Once the anonymous user decided that Dellingr offer is interesting, application process would start. 
+\subsection{Application Process}
+
+As the first step of application, user had to authenticate into Dellingr self-service using identity provider from eduGain. Two results were received through that:
+\begin{itemize}
+    \item A reliable name and unique ID of the user in eduGain federation;
+    \item Domain of the organization that user belongs to.
+\end{itemize}
+Unfortunately without authorization service containing reliable information about the group
+information about the user (affiliation, role), we could only rely on domain attribute in the eduGain's SAML assertion. Which meant that user had to register her own organization by filling in the form in the self-service - and that this affiliation information had to be manually confirmed at a later stage.
+
+Once the user has created organization, she was able to browse resources available for request at that moment in time. Over the period of the second pilot, some resources have been archived or paused -- this information has been updated in the self-service and made available to user at once.
+
+We initially hoped to be able to automate the whole process of delivery at least for some services, however the amount of issues connected with that was eventually beyond the scope of Dellingr resources and it was decided to use service desk system for processing requests instead. Please note that despite this technical limitation, the process is exactly the same both for manual and automated way.
+
+The user had to also fill in the project information, which has been attached to all requests for resources under that project.
+
+When requesting a resource, users had to:
+\begin{itemize}
+    \item Provide estimated requirements of resources in terms of CPU and GPU hours;
+    \item Provide the science domain for which the resources were planned to be used;
+    \item Provide nationalities of the users that were expected to get access to the resource.
+    \item Agree to the terms of services of the chosen service.
+\end{itemize}
+
+Once the user submitted the information, a request to \textbf{Virtual Allocation Committee} (\textbf{VAC})was been created. Upon receiving notification about new requests, VAC validated input data to see if it complies with the Rules of participation of Dellingr -- and if so, forwarding requests to the representative of the service, aka \textbf{National Allocation Committee} (\textbf{NAC}).
+
+NACs took as input request for allocation that had the minimal commonly agreed information (see above) as well as validation of VAC that request confirms to the Dellingr policy. NAC representative then could decide if the request also matches with requested resource policies and either grant or deny the application. 
+
+To make sure that process works smoothly, a separate role –– service manager –– was in place to follow up on created tickets and assure that requests are processed in time.
+
+\subsection{Resources}
+
+One of the most often asked question was 'What resources do you have'? To make sure that the answer is visible to the widest audience, we have collected various technical information about the services and exposed parts of it on the public website. Exposure was semi-automated, taking the JSON from the self-service (automatic) copying it to the Dellingr website (manual) and publishing it as static website in Jekyll (automatic). This has allowed to significantly reduce getting authenticated requests from users (which lead to request processing flow), who would not benefit from the provided offerings.  
+
+Over time some service offerings have been taken of the list due to different reasons, an example of state of affairs in the middle of February is shown below. Site properties were selected based on the main questions asked. One of the most requested resources was GPU access, however only one offering was providing that, which has hindered high number of requests from arriving.
+
+
+\begin{figure}
+\centering
+\includegraphics[height=180pt]{Dellingr-list-of-resource.png}
+\caption{Example of service offerings shown to users and accessible via Dellingr in February 2020}
+\end{figure}
+
+
+\section{Results}
+\label{sec:results}
+\input{results}
+
+\section{Conclusions}
+
+Overall, we see that the process implemented during the second pilot of Dellingr is:
+\begin{itemize}
+\item not very intrusive for the service providers;
+\item scalable in the number of participating users and organizations, both consumers and service providers;
+\item provided additional benefits beyond the initial scope, e.g. creating a small up-to-date public catalogue of HPC services in the Nordic region without extra effort.
+\end{itemize} 
+
+The user feedback, provided in the Appendix below, has been generally favourable, which is both motivating and hints that such service could be sustained beyond the Dellingr lifetime.
+
+\newpage
+\bibliography{main}{}
+\bibliographystyle{unsrt}
+
+\begin{appendices}
+
+\section{Responses from Framework users}
+\label{app:answers}
+\input{responses}
+% \section{Responses from Framework users 2}
+% \label{app:answers}
+% \input{responses2}
+\end{appendices}
+
+\end{document}
