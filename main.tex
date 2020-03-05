@@ -153,19 +153,23 @@ The main components of the website included:
 \end{itemize}
 
 % Once the anonymous user decided that some resources available Dellingr offer is interesting, application process would start. 
-Once the anonymous user decided that some resources available Dellingr offer is interesting, application process would start. 
+Once the user had decided that some resources available in the Dellingr offer were interesting, the application process would start. 
 
 \subsection{Application Process}
+\label{ssec:application}
 
-As the first step of application, user had to authenticate into Dellingr self-service using identity provider from eduGain. Two results were received through that:
+As the first step of the application process, a user had to authenticate into the Dellingr self-service portal using an identity provider from eduGAIN~\cite{edugain}. 
+Two results were received through that:
 \begin{itemize}
-    \item A reliable name and unique ID of the user in eduGain federation;
-    \item Domain of the organization that user belongs to.
+    \item A reliable name and unique ID of the user in the eduGAIN federation;
+    \item The domain of the organization that user belongs to.
 \end{itemize}
-Unfortunately without authorization service containing reliable information about the group
-information about the user (affiliation, role), we could only rely on domain attribute in the eduGain's SAML assertion. Which meant that user had to register her own organization by filling in the form in the self-service - and that this affiliation information had to be manually confirmed at a later stage.
+Unfortunately without the authentication service containing reliable information about the group information about the user (affiliation, role), 
+the only reliable affiliation information that could be obtained came from the domain attribute in the SAML assertion from eduGAIN. 
+This meant that the user had to register their own organization by filling in the form in the self-service portal and that this affiliation information had to be manually confirmed at a later stage.
 
-Once the user has created organization, she was able to browse resources available for request at that moment in time. Over the period of the second pilot, some resources have been archived or paused -- this information has been updated in the self-service and made available to user at once.
+Once the user has created their organization, they are able to browse resources available for request at that moment in time. 
+Over the period of the second pilot, some resources have been archived or paused and this information has been updated in the self-service and made available to user at once.
 
 We initially hoped to be able to automate the whole process of delivery at least for some services, however the amount of issues connected with that was eventually beyond the scope of Dellingr resources and it was decided to use service desk system for processing requests instead. Please note that despite this technical limitation, the process is exactly the same both for manual and automated way.
 
@@ -179,7 +183,8 @@ When requesting a resource, users had to:
     \item Agree to the terms of services of the chosen service.
 \end{itemize}
 
-Once the user submitted the information, a request to \textbf{Virtual Allocation Committee} (\textbf{VAC})was been created. Upon receiving notification about new requests, VAC validated input data to see if it complies with the Rules of participation of Dellingr -- and if so, forwarding requests to the representative of the service, aka \textbf{National Allocation Committee} (\textbf{NAC}).
+Once the user submitted the information, a request to \textbf{Virtual Allocation Committee} (\textbf{VAC}) was been created. 
+Upon receiving notification about new requests, the VAC validated input data to see if it complies with the Rules of participation of Dellingr -- and if so, forwarded the requests to the representative of the service, aka \textbf{National Allocation Committee} (\textbf{NAC}).
 
 NACs took as input request for allocation that had the minimal commonly agreed information (see above) as well as validation of VAC that request confirms to the Dellingr policy. NAC representative then could decide if the request also matches with requested resource policies and either grant or deny the application. 
 
@@ -195,9 +200,8 @@ Over time some service offerings have been taken of the list due to different re
 \begin{figure}
 \centering
 \includegraphics[height=180pt]{Dellingr-list-of-resource.png}
-\caption{Example of service offerings shown to users and accessible via Dellingr in February 2020}
+\caption{Example of service offerings shown to users and accessible via the Dellingr slef-service portal.}
 \end{figure}
-
 
 \section{Results}
 \label{sec:results}

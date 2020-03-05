@@ -1,15 +1,18 @@
+\newcommand{\BUcons}{6406\xspace}
+\newcommand{\BUreq}{134000\xspace}
+
 In this \pilot the resources were allocated in a different manner than the first pilot.
 In this case the users requested specific resources not in their country through the portal. 
 In the first pilot, the users requested an amount of computing time and were assigned to a resource manually by the \dell project.
 Also, the portal expressed the \einfra resources in a common format ``Billing Units" (BU)~\footnote{In general for all \dell resources, 1 CPU core has been set to cost 0.01 BU per month and one GPU core cost is 0.1 BU per month.}.
 
 The \dell \pilot was launched in June~2019 and the last applications were received in December~2019. 
-These figures summarize the extent of the Pilot:
+These figures summarize the extent of the Pilot~\footnote{As of \today}:
 \begin{itemize}
-\item 12 applications were received;
-\item 10 projects were accepted;
-\item XX BU were granted to the accepted projects;
-\item YY BU were consumed by the projects.
+\item 14 applications were received;
+\item 12 projects were accepted;
+\item \BUreq BU were granted to the accepted projects;
+\item \BUcons BU were consumed by the projects.
 \end{itemize}
 Only two applications were rejected. 
 
@@ -19,49 +22,68 @@ Table~\ref{tab:projects} shows the orders for resources received from users.
 \rowcolors{2}{gray!25}{white}
 \begin{tabular}{|p{7cm}|l|l|r|r|} \hline
 \bf Project Title & \bf From & \bf To &\bf Requested &\bf Used \\
-                  & & & BU & BU \\\hline
-Fluid reactions mechanism on mineral surface in planet interior. & IS & SE & 2000 & NA\footnote{The project was never assigned any allocation due to a misunderstanding in the project setup.} \\
-Benchmark comparison of pure, hybrid, double-hybrid DFT functionals against the highly accurate wavefunction methods for reliability for quantum dynamics simulations. & IS & FI & 5000 & 3.85 \\
-Simulation of ions in solutions using QM/MM method. & IS & FI & 10000 & 3.58 \\
-Acetonitrile parametrization. & DK & FI & 50000 & 482.94 \\
-Atomistic insight into difference and similarities of copper sulfide and oxide corrosion films. & SE & FI & 50000 & 1609.42 \\
-GETM high-resolution modelling for the Baltic Sea. & EST & SE & 500 & 594\\
+                  & & & {\bf BU} & {\bf BU} \\ \hline
 Exploring mechanisms of roughness creation at the nanoscale using a systematic set of large time and length scale Molecular Dynamics simulations. & DK & EST & 500 & {2085}\\
-Simulating Electronic and Nuclear Dynamics in Dye-Sensitized Solar Cells. & FI & EST & 2000 & \\
-Configuration space sampling of solvated hexaaquairon(II) and hexaaquairon(III). & IS & FI & 2000 & 51.30 \\
-Polarizable Embedding of Ions in Solution. & IS & FI & 2000 & 0 \\
+
+Acetonitrile parametrization. & DK & FI & 50000 & 482.94 \\
+
 Local structural correlations in Sn doped BCZT ferroelectric relaxors & DK & SE & 3000 & 1569\\
+
+GETM high-resolution modelling for the Baltic Sea. & EST & SE & 500 & 594 \\
+
+Simulating Electronic and Nuclear Dynamics in Dye-Sensitized Solar Cells. & FI & EST & 2000 & \\
+
+Fluid reactions mechanism on mineral surface in planet interior. & IS & SE & 2000 & n/a \\
+
+Simulation of ions in solutions using QM/MM method. & IS & FI & 10000 & 3.58 \\
+
 Simulating Electronic and Nuclear Dynamics in Dye-Sensitized Solar Cells & IS & FI & 5000 & 6.99 \\
-\bf Total & & & 132000 & \\\hline
+
+Benchmark comparison of pure, hybrid, double-hybrid DFT functionals against the highly accurate wavefunction methods for reliability for quantum dynamics simulations. & IS & FI & 5000 & 3.85 \\
+
+Configuration space sampling of solvated hexaaquairon(II) and hexaaquairon(III). & IS & FI & 2000 & 51.30 \\
+
+Polarizable Embedding of Ions in Solution. & IS & FI & 2000 & 0 \\
+
+Atomistic insight into difference and similarities of copper sulfide and oxide corrosion films. & SE & FI & 50000 & 1609.42 \\
+
+\bf Total & & & \BUreq & \BUcons \\\hline
 \end{tabular}
 \caption{Another convincing explanation.(DK=Denmark, EE=Estonia, FI=Finland, IS=Iceland, NO=Norway, SE=Sweden). \label{tab:projects}}
 \end{center}
 \end{table}
-\todo[inline]{AS: There was a continuation project of the Danish project from the first pilot. They only applied through the SUPR interface which is why it doesn't show up in Waldur. The title is "Local structural correlations in Sn doped BCZT ferroelectric relaxors" they requested 75kch/month over 4 months i.e. 300kch=3000bu. I'd say that this should count as well even though they didn't go through the portal.} 
-\todo[inline,backgroundcolor=red!25]{JW: Agree. Will add to the table.}
-\todo[inline]{PN: I added another similar case to the table: Project "Simulating Electronic and Nuclear Dynamics in Dye-Sensitized Solar Cells" is a continuation project from the first pilot, applied through CSC Service Desk.}
-\todo[inline]{PN: I updated Total Requested in the table.}
+% \todo[inline]{AS: There was a continuation project of the Danish project from the first pilot. They only applied through the SUPR interface which is why it doesn't show up in Waldur. The title is "Local structural correlations in Sn doped BCZT ferroelectric relaxors" they requested 75kch/month over 4 months i.e. 300kch=3000bu. I'd say that this should count as well even though they didn't go through the portal.} 
+% \todo[inline,backgroundcolor=red!25]{JW: Agree. Will add to the table.}
+% \todo[inline]{PN: I added another similar case to the table: Project "Simulating Electronic and Nuclear Dynamics in Dye-Sensitized Solar Cells" is a continuation project from the first pilot, applied through CSC Service Desk.}
+% \todo[inline]{PN: I updated Total Requested in the table.}
+% \todo[inline]{JW: Updated Table 2.}
 As can be seen in Table~\ref{tab:projects} the amount of BUs requested varies over two orders of magnitude.
+The amount of BUs consumed by the project also varies from very little (zero) to multiples of the original allocation.
+One project, with a BU consumption of "n/a" was not correctly assigned an allocation due to a misunderstanding in the project setup stages.
+
 Table~\ref{tab:results} shows the resource requests between client and hosting countries.
 \begin{table}[ht]
 \begin{center}
 % \vspace{0.5cm}
 \rowcolors{2}{gray!25}{white}
-\begin{tabular}{|l|r|r|r|r|r|r|r|} \hline
-\bf Host/Guest &Denmark &Estonia &Finland &Iceland &Norway$^*$ &Sweden &Total \\\hline
-Denmark & x & & & & & & 0 \\
-Estonia & 500 & x & & & & & 500 \\
-Finland & 50000 & & x & 21000 & & 50000 & 121000 \\
-Iceland & & & & x & & & 0 \\
-Norway$^*$  & & & & & x & & 0 \\
-Sweden  & 3000 & 500 & & 2000 & & x & 5500 \\
+\begin{tabular}{|l|r|r|r|r|r|r|r|r|} \hline
+{\bf Host/Guest} & \bf Denmark & \bf Estonia & \bf Finland & \bf Iceland & \bf Norway$^*$ & \bf Sweden 
+& \multicolumn{2}{c|}{\bf Total} \\ \cline{7-9}
+ & & & & & & & \multicolumn{1}{r}{\bf BU} & {\bf \#} \\ \hline
+\bf Denmark & x & & & & & & 0 & 0\\
+\bf Estonia & 500 & x & 2000 & & & & 2500 & 2 \\
+\bf Finland & 50000 & & x & 26000 & & 50000 & 126000 & 7 \\
+\bf Iceland & & & & x & & & 0 & 0\\
+\bf Norway$^*$  & & & & & x & & 0 & 0\\
+\bf Sweden  & 3000 & 500 & & 2000 & & x & 5500 & 3 \\
 \hline
-Total & 53500 & 500 & 0 & 23000 & 0 & 50000 & 127000 \\ \hline
+\bf Total BU (\#) & 53500 (3) & 500 (1) & 2000 (1) & 28000 (6) & 0 & 50000 (1) & \BUreq & 12 \\ \hline
 \end{tabular}
-\caption{A decent explanation. \label{tab:results}}
+\caption{The number of BUs requested and hosted per country. The horizontal (vertical) view gives the number of BUs hosted (requested) per country. $*$ Norway has observer status only.\label{tab:results}}
 % \vspace{0.5cm}
 \end{center}
 \end{table}
-
-As the number of accepted projects was 10 and the number of entries in Table~\ref{tab:projects} is 6, it can be seen that most countries only managed to generate 1 request.
-The exception to this was Iceland that generated 6 projects and, to a lesser extent, Denmark that generated 2 projects.
+As the number of accepted projects was 12 and the number of entries in Table~\ref{tab:results} is 8, it can be seen that most countries managed to generate 1 request.
+The exception to this was Iceland that generated 6 projects and, to a lesser extent, Denmark that generated 3 projects.
+It can be seen in Table~\ref{tab:results} that one country (Finland) hosted the majority of the projects and BUs and one country (Iceland) generated the 
+majority of the projects but not the majority of the BUs requested.
