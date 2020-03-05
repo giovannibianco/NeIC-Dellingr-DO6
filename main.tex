@@ -96,6 +96,7 @@ John White {\tt john.white@cern.ch};
 \section{Executive Summary}
 
 \todo[inline]{JW: An example comment on the complete lack of executive summary... anyway we do this right at the end.}
+
 \subsection{Outline of document}
 
 The contributed shared resources will be made available to researchers in the Nordics through merit-based competitive mechanisms. These mechanisms, for example a support structure for the open call and an ``allocation committee", will balance the capabilities, timelines and loads on the resources. This would be done through an open call from the National Providers.
@@ -116,7 +117,7 @@ February 2020.
 
 \section{Purpose of the Document}
 
-This document describes setup of the second pilot of Dellingr as well as provides user feedback of the participants.
+This document describes setup of the second pilot of \dell as well as provides user feedback of the participants.
 
 \section{Test of Cross Border Resource Sharing Framework}
 
@@ -139,26 +140,26 @@ of~\cite{dellingr-p2-do5}.
 \begin{figure}
 \centering
 \includegraphics[height=450pt]{diagram.pdf}
-\caption{Overview of the second Dellingr pilot setup}
+\caption{Overview of the second \dell pilot setup}
 \end{figure}
 
-First of all, we have adjusted the \dell project website so it can be used as a landing page for new users willing to get access to resources and used in promotional activities. 
+First of all, we have adjusted the \dell project website so it can be used as a landing page~\cite{dellingr-landing} for new users willing to get access to resources and used in promotional activities. 
 The website is public and does not require any authentication.
 
 The main components of the website included:
 \begin{itemize}
     \item Description of rules of participation in the second pilot: \url{https://dellingr.neic.no/apply/}.
-    \item Guide for applying for resources via Dellingr self-service: \url{https://dellingr.neic.no/guide/}.
-    \item Up to date list of computational services available to the users along with some basic technical and performance properties \url{https://dellingr.neic.no/offerings/}.
+    \item Guide for applying for resources via \dell self-service: \url{https://dellingr.neic.no/guide/}.
+    \item Up to date list of computational services available to the users along with some basic technical and performance properties: \url{https://dellingr.neic.no/offerings/}.
 \end{itemize}
 
 % Once the anonymous user decided that some resources available Dellingr offer is interesting, application process would start. 
-Once the user had decided that some resources available in the Dellingr offer were interesting, the application process would start. 
+Once the user had decided that some resources available in the \dell offer were interesting, the application process would start. 
 
 \subsection{Application Process}
 \label{ssec:application}
 
-As the first step of the application process, a user had to authenticate into the Dellingr self-service portal using an identity provider from eduGAIN~\cite{edugain}. 
+As the first step of the application process, a user had to authenticate into the \dell self-service portal using an identity provider from eduGAIN~\cite{edugain}. 
 Two results were received through that:
 \begin{itemize}
     \item A reliable name and unique ID of the user in the eduGAIN federation;
@@ -171,7 +172,7 @@ This meant that the user had to register their own organization by filling in th
 Once the user has created their organization, they are able to browse resources available for request at that moment in time. 
 Over the period of the second pilot, some resources have been archived or paused and this information has been updated in the self-service and made available to user at once.
 
-We initially hoped to be able to automate the whole process of delivery at least for some services, however the amount of issues connected with that was eventually beyond the scope of Dellingr resources and it was decided to use service desk system for processing requests instead. Please note that despite this technical limitation, the process is exactly the same both for manual and automated way.
+We initially hoped to be able to automate the whole process of delivery at least for some services, however the amount of issues connected with that was eventually beyond the scope of \dell resources and it was decided to use service desk system for processing requests instead. Please note that despite this technical limitation, the process is exactly the same both for manual and automated way.
 
 The user had to also fill in the project information, which has been attached to all requests for resources under that project.
 
@@ -184,15 +185,15 @@ When requesting a resource, users had to:
 \end{itemize}
 
 Once the user submitted the information, a request to \textbf{Virtual Allocation Committee} (\textbf{VAC}) was been created. 
-Upon receiving notification about new requests, the VAC validated input data to see if it complies with the Rules of participation of Dellingr -- and if so, forwarded the requests to the representative of the service, aka \textbf{National Allocation Committee} (\textbf{NAC}).
+Upon receiving notification about new requests, the VAC validated input data to see if it complies with the Rules of participation of \dell -- and if so, forwarded the requests to the representative of the service, aka \textbf{National Allocation Committee} (\textbf{NAC}).
 
-NACs took as input request for allocation that had the minimal commonly agreed information (see above) as well as validation of VAC that request confirms to the Dellingr policy. NAC representative then could decide if the request also matches with requested resource policies and either grant or deny the application. 
+NACs took as input request for allocation that had the minimal commonly agreed information (see above) as well as validation of VAC that request confirms to the \dell policy. NAC representative then could decide if the request also matches with requested resource policies and either grant or deny the application. 
 
 To make sure that process works smoothly, a separate role –– service manager –– was in place to follow up on created tickets and assure that requests are processed in time.
 
 \subsection{Resources}
 
-One of the most often asked question was 'What resources do you have'? To make sure that the answer is visible to the widest audience, we have collected various technical information about the services and exposed parts of it on the public website. Exposure was semi-automated, taking the JSON from the self-service (automatic) copying it to the Dellingr website (manual) and publishing it as static website in Jekyll (automatic). This has allowed to significantly reduce getting authenticated requests from users (which lead to request processing flow), who would not benefit from the provided offerings.  
+One of the most often asked question was 'What resources do you have'? To make sure that the answer is visible to the widest audience, we have collected various technical information about the services and exposed parts of it on the public website. Exposure was semi-automated, taking the JSON from the self-service (automatic) copying it to the \dell website (manual) and publishing it as static website in Jekyll (automatic). This has allowed to significantly reduce getting authenticated requests from users (which lead to request processing flow), who would not benefit from the provided offerings.  
 
 Over time some service offerings have been taken of the list due to different reasons, an example of state of affairs in the middle of February is shown below. Site properties were selected based on the main questions asked. One of the most requested resources was GPU access, however only one offering was providing that, which has hindered high number of requests from arriving.
 
@@ -200,7 +201,7 @@ Over time some service offerings have been taken of the list due to different re
 \begin{figure}
 \centering
 \includegraphics[height=180pt]{Dellingr-list-of-resource.png}
-\caption{Example of service offerings shown to users and accessible via the Dellingr slef-service portal.}
+\caption{Example of service offerings shown to users and accessible via the \dell self-service portal.}
 \end{figure}
 
 \section{Results}
@@ -209,15 +210,26 @@ Over time some service offerings have been taken of the list due to different re
 
 \section{Conclusions}
 
-Overall, we see that the process implemented during the second pilot of Dellingr is:
+Overall, we see that the process implemented during the second pilot of \dell is:
 \begin{itemize}
 \item not very intrusive for the service providers;
 \item scalable in the number of participating users and organizations, both consumers and service providers;
 \item provided additional benefits beyond the initial scope, e.g. creating a small up-to-date public catalogue of HPC services in the Nordic region without extra effort.
 \end{itemize} 
 
-The user feedback, provided in the Appendix below, has been generally favourable, which is both motivating and hints that such service could be sustained beyond the Dellingr lifetime.
+User feedback was requested from the participants who requested and received an allocation of BUs in the pilot.
+Of the 12 projects accepted, we received answers from 6 of the users.
+The respondents are split evenly between those that had participated in the first pilot and those who had not.
+The users generally found it easy to access the ``foreign" \einfra resources, probably due to the refined procedures to accept users developed by the NACs of the national \einfra providers.
+In general, these users did not have application or licencing support issues.
+This might be because users are requesting through a self-service portal to run on non-local resources and are therefore more likely to have open-source software.
+Of the users that have not used their allocated resources~\footnote{As of \today}, all indicated that they intend to do so.
+None of the respondent users replied that this type of resource sharing/access
+is not useful.
+A response from more than one user indicated that this is useful for early stage researchers and method development.
+The user feedback, provided in the Appendix below, has been generally favourable, which is both motivating and hints that such service could be sustained beyond the \dell lifetime.
 
+As part of the ``contract" between \dell, NeIC and the pilot participants is that any work resulting from the \einfra resources accessed would have an attribution attached: ``This work was made possible (in part) by usage of computing resources at (institution) through the NeIC Dellingr resource sharing pilot."
 \newpage
 \bibliography{main}{}
 \bibliographystyle{unsrt}
