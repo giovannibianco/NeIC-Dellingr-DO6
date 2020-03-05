@@ -145,41 +145,40 @@ of~\cite{dellingr-p2-do5}.
 
 First of all, we have adjusted the \dell project website so it can be used as a landing page~\cite{dellingr-landing} for new users willing to get access to resources and used in promotional activities. 
 The website is public and does not require any authentication.
-
 The main components of the website included:
 \begin{itemize}
     \item Description of rules of participation in the second pilot: \url{https://dellingr.neic.no/apply/}.
     \item Guide for applying for resources via \dell self-service: \url{https://dellingr.neic.no/guide/}.
     \item Up to date list of computational services available to the users along with some basic technical and performance properties: \url{https://dellingr.neic.no/offerings/}.
 \end{itemize}
-
 % Once the anonymous user decided that some resources available Dellingr offer is interesting, application process would start. 
-Once the user had decided that some resources available in the \dell offer were interesting, the application process would start. 
+Once the user had decided that some \einfra resources available in the \dell offer were interesting, the application process would start. 
 
 \subsection{Application Process}
 \label{ssec:application}
 
 As the first step of the application process, a user had to authenticate into the \dell self-service portal using an identity provider from eduGAIN~\cite{edugain}. 
-Two results were received through that:
+Two results were received through the usage of eduGAIN:
 \begin{itemize}
     \item A reliable name and unique ID of the user in the eduGAIN federation;
     \item The domain of the organization that user belongs to.
 \end{itemize}
-Unfortunately without the authentication service containing reliable information about the group information about the user (affiliation, role), 
+Unfortunately without the authentication service containing reliable information on the group information about the user (affiliation, role), 
 the only reliable affiliation information that could be obtained came from the domain attribute in the SAML assertion from eduGAIN. 
 This meant that the user had to register their own organization by filling in the form in the self-service portal and that this affiliation information had to be manually confirmed at a later stage.
 
 Once the user has created their organization, they are able to browse resources available for request at that moment in time. 
-Over the period of the second pilot, some resources have been archived or paused and this information has been updated in the self-service and made available to user at once.
+Over the period of the second pilot, some resources can be activated, archived or paused by the resource owners.
+These actions cause the system information to be updated in the self-service portal and the user can see these changes at once.
 
-We initially hoped to be able to automate the whole process of delivery at least for some services, however the amount of issues connected with that was eventually beyond the scope of \dell resources and it was decided to use service desk system for processing requests instead. Please note that despite this technical limitation, the process is exactly the same both for manual and automated way.
+We initially hoped to be able to automate the whole process of delivery at least for some services, however the amount of issues connected with that was eventually beyond the scope of \dell resources and it was decided to use a service desk system, Jira~\cite{jira}, for processing requests instead. 
+Please note that despite this technical limitation, the process is exactly the same for both the manual and automated way.
 
 The user had to also fill in the project information, which has been attached to all requests for resources under that project.
-
 When requesting a resource, users had to:
 \begin{itemize}
     \item Provide estimated requirements of resources in terms of CPU and GPU hours;
-    \item Provide the science domain for which the resources were planned to be used;
+    \item Provide the science domain (following the standard from~\cite{science-domains}) for which the resources were planned to be used;
     \item Provide nationalities of the users that were expected to get access to the resource.
     \item Agree to the terms of services of the chosen service.
 \end{itemize}
