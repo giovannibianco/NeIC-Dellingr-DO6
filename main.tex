@@ -57,6 +57,10 @@
 
 \newcommand{\pilot}{first test of a Nordic resource-sharing framework\xspace}
 
+\newcommand{\BUcons}{6406\xspace}
+\newcommand{\BUreq}{130000\xspace}
+\newcommand{\accepted}{11\xspace}
+
 \title{
 {\bf \dell Phase 2: Deliverable 6} \\
 {\it Nordic availability of shared resources}
@@ -96,21 +100,23 @@ John White {\tt john.white@cern.ch};
 \section{Executive Summary}
 \label{sec-exec-summ}
 
-The NeIC \dell project is investigating how a lightweight framework for sharing High Performance Computing~(HPC) resources~\footnote{Defined generally as compute, network and storage \einfra.} can be implemented between participating countries~\footnote{Currently this includes the Nordic countries and Estonia.}. The resources will be open to eligible researchers~\footnote{At the moment we do not address commercial users that some countries have agreements to provide/use resources.} from the participating countries who wish to access resources in other participating countries.
+The NeIC \dell project is investigating how a lightweight framework for sharing High Performance Computing~(HPC) resources~\footnote{Defined generally as compute, network and storage \einfra.} can be implemented between participating countries~\footnote{Currently this includes the Nordic countries and Estonia.}.
+The \dell project has established two temporary trials (pilot) of cross border \einfra resource sharing in order to validate the policies and practicalities. 
+The \einfra resources were opened to eligible researchers~\footnote{At the moment we do not address commercial users that some countries have agreements to provide/use resources.} from the participating countries who wished to access resources in other participating countries.
 
-This document describes approach and results of the second pilot for sharing resources cross borders. In particular, a common lightweight process for the
-application for resources was agreed by services providers. It was implemented using several tools, in particular Jekyll for displaying available resources to the wider audience, Waldur for self-service request management and accounting, and Atlassian Service Desk aka Jira for implementing the workflow for resource delivery.
+This document describes approach and results of the second pilot 
+% (the \pilot)
+for sharing resources across borders. 
+In particular, a common lightweight process for the application for resources was agreed by the participating services providers. 
+It was implemented using several tools, in particular Jekyll for displaying available resources to the wider audience, Waldur for self-service request management and accounting, and Atlassian Service Desk aka Jira for implementing the workflow for resource delivery.
 
-\todo[inline]{PN: cross-borders-->cross borders (done)}
-
-Finally, we provide also results of the run of the second pilot, including summary of allocated resources. To make it easier to compare and account for heterogeneous resources, a Billing Unit (BU) was used to convert CPU (100 hours = 1 BU) and GPU (10 hours = 1 BU) consumption to a common value. In totaling 6406 Billing Units were consumed with 134000 BUs allocated.
-
-\todo[inline]{PN: Check how much was allocated... or should we tell how much was requested? \\
-PN: Remember to update final numbers.}
-
-User feedback from the run is included in the appendix of the document and has been generally positive.
-
-\todo[inline]{PN: feedback from the run-->feedback from the project (done)}
+% \todo[inline]{PN: cross-borders-->cross borders (done)}
+Finally, we provide also results of the run of the second pilot, including summary of allocated resources. 
+To make it easier to compare and account for heterogeneous resources, a Billing Unit (BU) was used to convert CPU (100 hours = 1 BU) and GPU (10 hours = 1 BU) consumption to a common value. 
+In total, \BUcons~Billing Units were consumed with \BUreq~Billing Units allocated.
+\todo[inline]{PN: Check how much was allocated... or should we tell how much was requested? \\ PN: Remember to update final numbers.}
+The user feedback from the \pilot is included in Appendix~\ref{app:answers} and has is generally positive.
+% \todo[inline]{PN: feedback from the run-->feedback from the project (done)}
 
 \subsection{Outline of document}
 
@@ -203,7 +209,10 @@ When requesting a resource, users had to:
 Once the user submitted the information, a request to \textbf{Virtual Allocation Committee} (\textbf{VAC}) was been created. 
 Upon receiving notification about new requests, the VAC validated input data to see if it complies with the Rules of participation of \dell -- and if so, forwarded the requests to the representative of the service, aka \textbf{National Allocation Committee} (\textbf{NAC}).
 
-NACs took as input request for allocation that had the minimal commonly agreed information (see above) as well as validation of VAC that request confirms to the \dell policy. NAC representative then could decide if the request also matches with requested resource policies and either grant or deny the application. 
+The NACs took as input the request for am \einfra allocation that had the minimal commonly agreed information (see above) as well as validation of VAC that request conforms to the \dell policy. 
+The NAC representative then could decide if the request also matches with
+the policies at the requested resource and either grant or deny the application.
+The amount of \einfra BUs requested by the user could be approved unchanged or be modified by the NAC representative resulting in the {\bf allocated BUs}.
 
 To make sure that process works smoothly, a separate role –– service manager –– was in place to follow up on created tickets and assure that requests are processed in time.
 
@@ -211,8 +220,8 @@ To make sure that process works smoothly, a separate role –– service manage
 
 One of the most often asked question was 'What resources do you have'? To make sure that the answer is visible to the widest audience, we have collected various technical information about the services and exposed parts of it on the public website. Exposure was semi-automated, taking the JSON from the self-service (automatic) copying it to the \dell website (manual) and publishing it as static website in Jekyll (automatic). This has allowed to significantly reduce getting authenticated requests from users (which lead to request processing flow), who would not benefit from the provided offerings.  
 
-Over time some service offerings have been taken of the list due to different reasons, an example of state of affairs in the middle of February is shown below. Site properties were selected based on the main questions asked. One of the most requested resources was GPU access, however only one offering was providing that, which has hindered high number of requests from arriving.
-
+Over time some service offerings have been taken of the list due to different reasons, an example of state of affairs in the middle of February is shown below. Site properties were selected based on the main questions asked. 
+One of the most requested resources was GPU access, however only one offering was providing that, which has hindered high number of requests from arriving.
 
 \begin{figure}
 \centering
@@ -234,7 +243,7 @@ Overall, we see that the process implemented during the second pilot of \dell is
 \end{itemize} 
 
 User feedback was requested from the participants who requested and received an allocation of BUs in the pilot.
-Of the 12 projects accepted, we received answers from 6 of the users.
+Of the \accepted projects accepted, we received answers from 6 of the users.
 The respondents are split evenly between those that had participated in the first pilot and those who had not.
 The users generally found it easy to access the ``foreign" \einfra resources, probably due to the refined procedures to accept users developed by the NACs of the national \einfra providers.
 In general, these users did not have application or licencing support issues.
