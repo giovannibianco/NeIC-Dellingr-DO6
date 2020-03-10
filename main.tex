@@ -94,9 +94,23 @@ John White {\tt john.white@cern.ch};
 \newpage
 
 \section{Executive Summary}
+\label{sec-exec-summ}
 
-\todo[inline]{JW: An example comment on the complete lack of executive summary... anyway we do this right at the end.}
-The summary of the completed document goes here...
+The NeIC \dell project is investigating how a lightweight framework for sharing High Performance Computing~(HPC) resources~\footnote{Defined generally as compute, network and storage \einfra.} can be implemented between participating countries~\footnote{Currently this includes the Nordic countries and Estonia.}. The resources will be open to eligible researchers~\footnote{At the moment we do not address commercial users that some countries have agreements to provide/use resources.} from the participating countries who wish to access resources in other participating countries.
+
+This document describes approach and results of the second pilot for sharing resources cross borders. In particular, a common lightweight process for the
+application for resources was agreed by services providers. It was implemented using several tools, in particular Jekyll for displaying available resources to the wider audience, Waldur for self-service request management and accounting, and Atlassian Service Desk aka Jira for implementing the workflow for resource delivery.
+
+\todo[inline]{PN: cross-borders-->cross borders (done)}
+
+Finally, we provide also results of the run of the second pilot, including summary of allocated resources. To make it easier to compare and account for heterogeneous resources, a Billing Unit (BU) was used to convert CPU (100 hours = 1 BU) and GPU (10 hours = 1 BU) consumption to a common value. In totaling 6406 Billing Units were consumed with 134000 BUs allocated.
+
+\todo[inline]{PN: Check how much was allocated... or should we tell how much was requested? \\
+PN: Remember to update final numbers.}
+
+User feedback from the run is included in the appendix of the document and has been generally positive.
+
+\todo[inline]{PN: feedback from the run-->feedback from the project (done)}
 
 \subsection{Outline of document}
 
@@ -235,6 +249,8 @@ As part of the ``contract" between \dell, NeIC and the pilot participants is tha
 ``This work was made possible (in part) by usage of computing resources at (institution) through the NeIC Dellingr resource sharing pilot.''
 The publications from the 1$^{\rm st}$ \dell pilot can be seen at~\cite{pilot-pubs}.
 Due to the length of time for the process from data analysis to publication, it is not expected to receive notice of publications attributed to this second pilot before the official end of the \dell project.
+
+\todo[inline]{PN: Conclusions OK, nothing to add!}
 
 \newpage
 \bibliography{main}{}
