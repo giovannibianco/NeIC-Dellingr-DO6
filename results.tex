@@ -2,22 +2,24 @@
 In this \pilot the resources were allocated in a different manner than the first pilot.
 In this case the users requested specific resources not in their country through the portal. 
 In the first pilot, the users requested an amount of computing time and were assigned to a resource manually by the \dell project.
-Also, the self-service portal expressed the \einfra resources in a common format ``Billing Units" (BU)~\footnote{In general for all \dell resources, 1 CPU core has been set to cost 0.01 BU per month and one GPU core cost is 0.1 BU per month.}.
+Also, the self-service portal expressed the \einfra resources in a common format ``Billing Units" (BU)~\footnote{In general for all \dell resources, 1 CPU core has been set to cost 0.01 BU per hour and one GPU core cost is 0.1 BU per hour.}.
+\todo[inline]{PN: In footnote: BU per month-->BU per hour (done)}
 
 The \dell \pilot was launched in June~2019 and the last applications were received in December~2019. 
 These figures summarize the extent of the Pilot~\footnote{As of \today}:
 \begin{itemize}
 \item 13 applications were received;
 \item \accepted projects were accepted;
-\item \BUreq BU were granted to the accepted projects;
+\item \BUalloc BU were granted to the accepted projects;
 \item \BUcons BU were consumed by the projects.
 \end{itemize}
 Only two applications were rejected. 
-Two of the twelve applications accepted were handled through channels other than the self-service portal.
+Two of the eleven applications accepted were handled through channels other than the self-service portal.
 One was a Danish continuation of resource usage from the first \dell pilot and was handled through the Swedish SUPR~\cite{supr} portal.
 The other was am Icelandic continuation of resource usage from the first \dell pilot and was handled through the CSC Service Desk~\cite{csc-service-desk}.
 
-\todo[inline]{PN: Check the numbers above. How much was granted... or should it be how much was requested? \\ PN: Remember to update final numbers.}
+\todo[inline]{PN: PN: I replaced all occurrences of BUreq with BUalloc in main.tex (done) \\
+PN: twelve-->eleven (done)}
 
 Table~\ref{tab:projects} shows the orders for resources received from users.
 \begin{table}
@@ -28,7 +30,7 @@ Table~\ref{tab:projects} shows the orders for resources received from users.
                   & & & {\bf BU} & {\bf BU} \\ \hline
 Exploring mechanisms of roughness creation at the nanoscale using a systematic set of large time and length scale Molecular Dynamics simulations & DK & EST & 500 & {2085}\\
 
-Acetonitrile parametrization & DK & FI & 1000 & 482.94 \\ %Requested: 50000
+Acetonitrile parametrization & DK & FI & 500 & 482.94 \\ %Requested: 50000(?)
 
 Local structural correlations in Sn doped BCZT ferroelectric relaxors & DK & SE & 3000 & 1569\\
 
@@ -36,38 +38,41 @@ GETM high-resolution modelling for the Baltic Sea & EST & SE & 500 & 594 \\
 
 %% Simulating Electronic and Nuclear Dynamics in Dye-Sensitized Solar Cells & FI & EST & 2000 & \\
 
-Fluid reactions mechanism on mineral surface in planet interior. & IS & SE & 2000 & n/a \\
+Simulation of ions in solutions using QM/MM method & IS & FI & 1000 & 3.58 \\ %Requested: 10000(?)
 
-Simulation of ions in solutions using QM/MM method & IS & FI & 2000 & 3.58 \\ %Requested: 10000
+Simulating Electronic and Nuclear Dynamics in Dye-Sensitized Solar Cells & IS & FI & 500 & 6.99 \\ %Requested: 5000(?)
 
-Simulating Electronic and Nuclear Dynamics in Dye-Sensitized Solar Cells & IS & FI & 1000 & 6.99 \\ %Requested: 5000
+Benchmark comparison of pure, hybrid, double-hybrid DFT functionals against the highly accurate wavefunction methods for reliability for quantum dynamics simulations & IS & FI & 500 & 3.85 \\  %Requested: 5000(?)
 
-Benchmark comparison of pure, hybrid, double-hybrid DFT functionals against the highly accurate wavefunction methods for reliability for quantum dynamics simulations & IS & FI & 1000 & 3.85 \\  %Requested: 5000
+Configuration space sampling of solvated hexaaquairon(II) and hexaaquairon(III) & IS & FI & 500 & 51.30 \\  %Requested: 2000(?)
 
-Configuration space sampling of solvated hexaaquairon(II) and hexaaquairon(III) & IS & FI & 2000 & 51.30 \\  %Requested: 2000
+Polarizable Embedding of Ions in Solution & IS & FI & 500 & 0 \\  %Requested: 2000(?)
 
-Polarizable Embedding of Ions in Solution & IS & FI & 2000 & 0 \\  %Requested: 2000
+Fluid reactions mechanism on mineral surface in planet interior & IS & SE & 2000 & n/a \\
 
-Atomistic insight into difference and similarities of copper sulfide and oxide corrosion films & SE & FI & 50000 & 1609.42 \\
+Atomistic insight into difference and similarities of copper sulfide and oxide corrosion films & SE & FI & 2500 & 1609.42 \\ %Requested: 50000(?)
 
-\bf Total & & & \BUreq & \BUcons \\\hline
+\bf Total & & & \BUalloc & \BUcons \\\hline
 \end{tabular}
 \caption{The accepted projects in the \pilot. (DK=Denmark, EE=Estonia, FI=Finland, IS=Iceland, NO=Norway, SE=Sweden). \label{tab:projects}}
 \end{center}
 \end{table}
-\todo[inline]{Why there is a double project "Simulating Electronic and Nuclear Dynamics in Dye-Sensitized Solar Cells" in Table~\ref{tab:projects}?}
 \todo[inline]{PN: Removed full stops (.) from project titles in Table~\ref{tab:projects} (done) \\
 PN: Should we show granted BUs instead of requested in Table~\ref{tab:projects}? \\
 JW: Changed to allocated BUs here and in the text. \\
 PN: I have put allocated BUs for projects run at CSC. \\
+PN: Should Estonia be EST (as in the table) or EE (as in the caption)? \\
 PN: I will update usage figures in Table~\ref{tab:projects} on 13th March. \\
-PN: Remember to update Total allocated and Total used in Table~\ref{tab:projects}.}
-As can be seen in Table~\ref{tab:projects} the amount of BUs requested varies over two orders of magnitude.
+PN: Remember to update Total allocated (BUalloc) and Total used (BUcons) in main.tex.}
+As can be seen in Table~\ref{tab:projects} the amount of BUs allocated varies.
 The amount of BUs consumed by the project also varies from very little (zero) to multiples of the original allocation.
 One project, with a BU consumption of "n/a" was not correctly assigned an allocation due to a misunderstanding in the project setup stages.
-Overall, the rate of BUs consumed is very low.
+Overall, the rate of BUs consumed is rather low.
 
-Table~\ref{tab:results} shows the resource requests between client and hosting countries.
+\todo[inline]{PN: requested varies over two orders of magnitude-->allocated varies (done) \\
+PN: very low-->rather low (done)}
+
+Table~\ref{tab:results} shows the resource allocations between client and hosting countries.
 \begin{table}[ht]
 \begin{center}
 % \vspace{0.5cm}
@@ -77,20 +82,22 @@ Table~\ref{tab:results} shows the resource requests between client and hosting c
 & \multicolumn{2}{c|}{\bf Total} \\ \cline{7-9}
  & & & & & & & \multicolumn{1}{r}{\bf BU} & {\bf \#} \\ \hline
 \bf Denmark & x & & & & & & 0 & 0\\
-\bf Estonia & 500 & x & & & & & 500 & 2 \\
-\bf Finland & 50000 & & x & 24000 & & 50000 & 126000 & 7 \\
+\bf Estonia & 500 & x & & & & & 500 & 1 \\
+\bf Finland & 500 & & x & 3000 & & 2500 & 6000 & 7 \\
 \bf Iceland & & & & x & & & 0 & 0\\
 \bf Norway$^*$  & & & & & x & & 0 & 0\\
 \bf Sweden  & 3000 & 500 & & 2000 & & x & 5500 & 3 \\
 \hline
-\bf Total BU (\#) & 53500 (3) & 500 (1) &  & 26000 (6) & 0 & 50000 (1) & \BUreq & \accepted \\ \hline
+\bf Total BU (\#) & 4000 (3) & 500 (1) &  & 5000 (6) &  & 2500 (1) & \BUalloc & \accepted \\ \hline
 \end{tabular}
-\caption{The number of BUs requested and hosted per country. The horizontal (vertical) view gives the number of BUs hosted (requested) per country. $*$ Norway has observer status only.\label{tab:results}}
+\caption{The number of BUs allocated and hosted per country. The horizontal (vertical) view gives the number of BUs hosted (allocated) per country. $*$ Norway has observer status only.\label{tab:results}}
 % \vspace{0.5cm}
 \end{center}
 \end{table}
-\todo[inline]{PN: Remember to update final numbers in Table~\ref{tab:results}. \\ JW: Hopefully Table 2 does not need to be updated. Only Table 1.}
+\todo[inline]{PN: I updated Table~\ref{tab:results} after requested BUs were replaced with allocated BUs.}
 As the number of accepted projects was \accepted and the number of entries in Table~\ref{tab:results} is 8, it can be seen that most countries managed to generate 1 request.
 The exception to this was Iceland that generated 6 projects and, to a lesser extent, Denmark that generated 3 projects.
-It can be seen in Table~\ref{tab:results} that one country (Finland) hosted the majority of the projects and BUs and one country (Iceland) generated the 
-majority of the projects but not the majority of the BUs requested.
+It can be seen in Table~\ref{tab:results} that two countries (Finland and Sweden) hosted the majority of the projects and BUs and one country (Iceland) generated the 
+majority of the projects but not the majority of the BUs allocated.
+
+\todo[inline]{PN: one country (Finland)-->two countries (Finland and Sweden) (done)}
