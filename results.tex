@@ -3,7 +3,6 @@ In this \pilot the resources were allocated in a different manner than the first
 In this case the users requested specific resources not in their country through the portal. 
 In the first pilot, the users requested an amount of computing time and were assigned to a resource manually by the \dell project.
 Also, the self-service portal expressed the \einfra resources in a common format ``Billing Units" (BU)~\footnote{In general for all \dell resources, 1 CPU core has been set to cost 0.01 BU per hour and one GPU core cost is 0.1 BU per hour.}.
-\todo[inline]{PN: In footnote: BU per month-->BU per hour (done)}
 
 The \dell \pilot was launched in June~2019 and the last applications were received in December~2019. 
 These figures summarize the extent of the Pilot~\footnote{As of \today}:
@@ -17,9 +16,6 @@ Only two applications were rejected.
 Two of the eleven applications accepted were handled through channels other than the self-service portal.
 One was a Danish continuation of resource usage from the first \dell pilot and was handled through the Swedish SUPR~\cite{supr} portal.
 The other was am Icelandic continuation of resource usage from the first \dell pilot and was handled through the CSC Service Desk~\cite{csc-service-desk}.
-
-\todo[inline]{PN: PN: I replaced all occurrences of BUreq with BUalloc in main.tex (done) \\
-PN: twelve-->eleven (done)}
 
 Table~\ref{tab:projects} shows the orders for resources received from users.
 \begin{table}
@@ -57,20 +53,10 @@ Atomistic insight into difference and similarities of copper sulfide and oxide c
 \caption{The accepted projects in the \pilot. (DK=Denmark, EE=Estonia, FI=Finland, IS=Iceland, NO=Norway, SE=Sweden). \label{tab:projects}}
 \end{center}
 \end{table}
-\todo[inline]{PN: Removed full stops (.) from project titles in Table~\ref{tab:projects} (done) \\
-PN: Should we show granted BUs instead of requested in Table~\ref{tab:projects}? \\
-JW: Changed to allocated BUs here and in the text. \\
-PN: I have put allocated BUs for projects run at CSC. \\
-PN: Should Estonia be EST (as in the table) or EE (as in the caption)? \\
-PN: I will update usage figures in Table~\ref{tab:projects} on 13th March. \\
-PN: Remember to update Total allocated (BUalloc) and Total used (BUcons) in main.tex.}
 As can be seen in Table~\ref{tab:projects} the amount of BUs allocated varies.
 The amount of BUs consumed by each project also varies from very little (zero) to multiples of the original allocation.
 One project, with a BU consumption of "n/a" was not correctly assigned an allocation due to a misunderstanding in the project setup stages.
 % Overall, the rate of BUs consumed is rather low.
-
-\todo[inline]{PN: requested varies over two orders of magnitude-->allocated varies (done) \\
-PN: very low-->rather low (done)}
 
 Table~\ref{tab:results} shows the resource allocations between client and hosting countries.
 \begin{table}[ht]
@@ -94,10 +80,12 @@ Table~\ref{tab:results} shows the resource allocations between client and hostin
 % \vspace{0.5cm}
 \end{center}
 \end{table}
-\todo[inline]{PN: I updated Table~\ref{tab:results} after requested BUs were replaced with allocated BUs.}
 As the number of accepted projects was \accepted and the number of entries in Table~\ref{tab:results} is 8, it can be seen that most countries managed to generate 1 request.
 The exception to this was Iceland that generated 6 projects and, to a lesser extent, Denmark that generated 3 projects.
 It can be seen in Table~\ref{tab:results} that two countries (Finland and Sweden) hosted the majority of the projects and BUs and one country (Iceland) generated the 
 majority of the projects but not the majority of the BUs allocated.
 
-\todo[inline]{PN: one country (Finland)-->two countries (Finland and Sweden) (done)}
+\todo[inline]{PN: In Table~\ref{tab:projects}, are all numbers in the fourth column the allocated resources (and not requested)? \\ PN: In Table~\ref{tab:results}, are all numbers the allocated resources (and not requested)? \\
+PN: In Table~\ref{tab:projects}, should Estonia be EST (as in the table) or EE (as in the caption)? \\
+PN: I will update FI usage figures in Table~\ref{tab:projects} on 13th March. \\
+PN: Remember to finally update Total allocated (BUalloc) and Total used (BUcons) in main.tex.}
