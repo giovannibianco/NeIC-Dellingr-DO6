@@ -104,7 +104,7 @@ The NeIC \dell project is investigating how a lightweight framework for sharing 
 The \dell project has established two temporary trials (pilots) of cross border \einfra resource sharing in order to validate the policies and practicalities. 
 The \einfra resources were opened to eligible researchers~\footnote{At the moment we do not address commercial users that some countries have agreements to provide/use resources.} from the participating countries who wished to access resources in other participating countries.
 
-This document describes approach and results of the second pilot
+This document describes approach and results of the \pilot (the second pilot in the \dell project)
 for sharing resources across borders. 
 In particular, a common lightweight process for the application for resources was agreed by the participating services providers. 
 It was implemented using several tools, in particular Jekyll for displaying available resources to the wider audience, Waldur for self-service request management and accounting, and Atlassian Service Desk aka Jira for implementing the workflow for resource delivery.
@@ -113,7 +113,7 @@ Finally, we provide also results of the run of the second pilot, including summa
 To make it easier to compare and account for heterogeneous resources, a Billing Unit (BU) was used to convert CPU (100 hours = 1 BU) and GPU (10 hours = 1 BU) consumption to a common value. 
 In total, \BUcons~Billing Units were consumed with \BUalloc~Billing Units allocated.
 
-The user feedback from the \pilot is included in Appendices~\ref{app:first-questions} and~\ref{app:answers} and is generally positive.
+The user feedback from the participants who requested resources in the \pilot is included in Appendices~\ref{app:first-questions} and~\ref{app:answers} and is generally positive.
 
 \subsection{Outline of document}
 
@@ -126,7 +126,7 @@ The National \einfra Providers and NeIC.
 \subsubsection{Delivery process}
 
 Delivery is an operational process that supports research based usage of resources across national boundaries. 
-The operational process for sharing the resources is based on the process in~\cite{dellingr-p2-do5}.
+The operational process for sharing the resources is based on the process described in~\cite{dellingr-p2-do5}.
 This process is facilitated by a modified Waldur~\cite{waldur} framework.
 An open call to solicit participants to test this framework was issued in June 2019.
 The \pilot is run and the requests and usage of the projects and the experiences of the participants are reported in this document.
@@ -152,15 +152,16 @@ Below we describe the framework we have used to facilitate the sharing and highl
 
 The main target of the \pilot were researchers that wanted to get access to computational resources.
 
-A diagram of the process that was setup is below along with more detailed explanation. 
-Overall the process was done according to the description in Section 8 
-of~\cite{dellingr-p2-do5}.
+Figure~\ref{fig:workflow} illustrates the process for resource sharing that was setup.
+% is below along with more detailed explanation. 
+Overall the process was done according to the description in Section 8 of~\cite{dellingr-p2-do5}.
 % DO5\footnote{\url{https://wiki.neic.no/w/int/img_auth.php/6/6f/NeIC_Dellingr_DO5_to_SG_v1.pdf}} / Section 8.
 
 \begin{figure}
 \centering
 \includegraphics[height=450pt]{diagram.pdf}
 \caption{A graphical overview of the second \dell pilot setup and workflow.}
+\label{fig:workflow}
 \end{figure}
 
 First of all, we have adjusted the \dell project website so it can be used as a landing page~\cite{dellingr-landing} for new users willing to get access to resources and used in promotional activities. 
@@ -191,20 +192,28 @@ Once the user has created their organization, they are able to browse resources 
 Over the period of the second pilot, some resources can be activated, archived or paused by the resource owners.
 These actions cause the system information to be updated in the self-service portal and the user can see these changes at once.
 
-We initially hoped to be able to automate the whole process of delivery at least for some services, however the amount of issues connected with that was eventually beyond the scope of \dell resources and it was decided to use a service desk system, Jira~\cite{jira}, for processing requests instead. 
+\todo[inline]{Ilja... check this paragraph below?}
+We initially hoped to be able to automate the whole process of resource sharing across borders from request to delivery
+at least for some services.
+However the amount of issues connected with full automation was eventually beyond the scope of \dell resources
+(e.g. modifying the source code of national allocation portals)
+and it was decided to use a service desk system, Jira~\cite{jira}, for processing requests instead. 
 Please note that despite this technical limitation, the process is exactly the same for both the manual and automated way.
 
 The user had to also fill in the project information, which has been attached to all requests for resources under that project.
 When requesting a resource, users had to:
 \begin{itemize}
     \item Provide estimated requirements of resources in terms of CPU and GPU hours;
-    \item Provide the science domain (following the standard from~\cite{science-domains}) for which the resources were planned to be used;
-    \item Provide nationalities of the users that were expected to get access to the resource.
+    \item Provide the science domain (following the standard from~\cite{science-domains}) for which the resources
+          were planned to be used;
+    \item Provide nationalities of the users that were expected to get access to the resource;
     \item Agree to the terms of services of the chosen service.
 \end{itemize}
 
-Once the user submitted the information, a request to \textbf{Virtual Allocation Committee} (\textbf{VAC}) was been created. 
-Upon receiving notification about new requests, the VAC validated input data to see if it complies with the Rules of participation of \dell -- and if so, forwarded the requests to the representative of the service, aka \textbf{National Allocation Committee} (\textbf{NAC}).
+Once the user submitted the information, a request to the \textbf{Virtual Allocation Committee}~\footnote{For such definitions, please see~\cite{dellingr-p2-do5}} (\textbf{VAC}) was been created. 
+Upon receiving notification about new requests, the VAC validated input data to see if it is in compliance
+with the Rules of participation of \dell -- and if so, forwarded the requests to the representative of the service,
+aka \textbf{National Allocation Committee} (\textbf{NAC}).
 
 The NACs took as input the request for am \einfra allocation that had the minimal commonly agreed information (see above) as well as validation of VAC that request conforms to the \dell policy. 
 The NAC representative then could decide if the request also matches with
@@ -215,15 +224,29 @@ To make sure that process works smoothly, a separate role –– service manage
 
 \subsection{Resources}
 
-One of the most often asked question was 'What resources do you have'? To make sure that the answer is visible to the widest audience, we have collected various technical information about the services and exposed parts of it on the public website. Exposure was semi-automated, taking the JSON from the self-service (automatic) copying it to the \dell website (manual) and publishing it as static website in Jekyll (automatic). This has allowed to significantly reduce getting authenticated requests from users (which lead to request processing flow), who would not benefit from the provided offerings.  
+One of the most often asked question was ``What resources do you have''?
+To make sure that the answer is visible to the widest audience, we have collected various
+technical information about the services and exposed parts of it on the public website.
+Exposure was semi-automated, taking the JSON from the self-service (automatic) copying it to
+the \dell website (manual) and publishing it as static website in Jekyll (automatic).
+This has allowed to significantly reduce getting authenticated requests from users (which lead to request processing flow), who would not benefit from the provided offerings.  
 
-Over time some service offerings have been taken of the list due to different reasons, an example of state of affairs in the middle of February is shown below. Site properties were selected based on the main questions asked. 
-One of the most requested resources was GPU access, however only one offering was providing that, which has hindered high number of requests from arriving.
+\todo[inline]{Ilja... check this paragraph below?}
+Over time some service offerings are added or removed from the self-service portal according to the
+policies and operations of the \nps.
+% have been taken of the list due to different reasons,
+Figure~\ref{fig:offerings} shows a snapshot of the \einfra resources on offer through the \dell \pilot.
+% an example of state of affairs in the middle of February is shown below.
+\todo[inline]{Ilja... This sentence below confuses me...?}
+Site properties were selected based on the main questions asked. 
+One of the most requested resources was GPU access, however only one offering was providing that,
+which has hindered high number of requests from arriving.
 
 \begin{figure}
 \centering
 \includegraphics[height=180pt]{Dellingr-list-of-resource.png}
 \caption{Example of service offerings shown to users and accessible via the \dell self-service portal.}
+\label{fig:offerings}
 \end{figure}
 
 \section{Results}
